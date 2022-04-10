@@ -7,9 +7,10 @@ import 'package:provider/provider.dart';
 import 'package:provider_shopper/common/theme.dart';
 import 'package:provider_shopper/models/cart.dart';
 import 'package:provider_shopper/models/catalog.dart';
-import 'package:provider_shopper/screens/cart.dart';
+import 'package:provider_shopper/screens/Register.dart';
+import 'package:provider_shopper/screens/Search.dart';
 import 'package:provider_shopper/screens/catalog.dart';
-import 'package:provider_shopper/screens/login.dart';
+import 'package:provider_shopper/screens/Home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,13 +40,14 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Provider Demo',
+        title: 'SeeHos',
         theme: appTheme,
         initialRoute: '/',
         routes: {
-          '/': (context) => const MyLogin(),
+          '/': (context) => const MyHome(),
           '/lists': (context) => const MyCatalog(),
-          '/search': (context) => const MyCart(),
+          '/search': (context) => const Mysearch(),
+          '/register': (context) => const Myregister(),
         },
       ),
     );

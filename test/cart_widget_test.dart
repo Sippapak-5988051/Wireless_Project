@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_shopper/models/cart.dart';
 import 'package:provider_shopper/models/catalog.dart';
-import 'package:provider_shopper/screens/cart.dart';
+import 'package:provider_shopper/screens/Search.dart';
 
 CartModel? cartModel;
 CatalogModel? catalogModel;
@@ -25,7 +25,7 @@ Widget createCartScreen() => MultiProvider(
         ),
       ],
       child: const MaterialApp(
-        home: MyCart(),
+        home: Mysearch(),
       ),
     );
 

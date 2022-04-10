@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 import 'package:provider_shopper/models/cart.dart';
 import 'package:provider_shopper/models/catalog.dart';
 import 'package:provider_shopper/screens/catalog.dart';
-import 'package:provider_shopper/screens/login.dart';
+import 'package:provider_shopper/screens/Home.dart';
 
 void main() {
   testWidgets('Login page Widget test', (tester) async {
@@ -26,7 +26,7 @@ void main() {
       child: MaterialApp(
         initialRoute: '/',
         routes: {
-          '/': (context) => const MyLogin(),
+          '/': (context) => const MyHome(),
           '/catalog': (context) => const MyCatalog(),
         },
       ),
