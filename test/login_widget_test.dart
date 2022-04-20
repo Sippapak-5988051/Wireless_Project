@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_shopper/models/cart.dart';
 import 'package:provider_shopper/models/catalog.dart';
-import 'package:provider_shopper/screens/catalog.dart';
+import 'package:provider_shopper/screens/List.dart';
 import 'package:provider_shopper/screens/Home.dart';
 
 void main() {
@@ -27,7 +27,7 @@ void main() {
         initialRoute: '/',
         routes: {
           '/': (context) => const MyHome(),
-          '/catalog': (context) => const MyCatalog(),
+          '/catalog': (context) => const Mylist(),
         },
       ),
     ));

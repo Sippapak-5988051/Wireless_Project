@@ -1,11 +1,8 @@
-// Copyright 2020 The Flutter team. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
+import 'package:provider_shopper/screens/Home.dart';
 
-class MyLogin extends StatelessWidget {
-  const MyLogin({Key? key}) : super(key: key);
+class Mylogin extends StatelessWidget {
+  const Mylogin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,28 +12,55 @@ class MyLogin extends StatelessWidget {
           padding: const EdgeInsets.all(80.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset("SEEHOS_Logo.png",),
-              ElevatedButton(
-                 child: Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: Text('Search nearby')),
-                onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/search');
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                ),
+            children: <Widget>[
+              Text(
+                "Login Page",
+                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20.0),
               ),
-              ElevatedButton(
-                child: Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Text('Hospital List')),
-                onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/lists');
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.grey,
+              SizedBox(
+                height: 20.0,
+              ),
+              TextField(
+                keyboardType: TextInputType.emailAddress,
+                textAlign: TextAlign.center,
+                onChanged: (value) {},
+                decoration: InputDecoration(
+                    hintText: "Enter your Email",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)))),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              TextField(
+                obscureText: true,
+                textAlign: TextAlign.center,
+                onChanged: (value) {},
+                decoration: InputDecoration(
+                    hintText: "Enter your Password",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)))),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Material(
+                elevation: 5,
+                color: Colors.lightBlue,
+                borderRadius: BorderRadius.circular(32.0),
+                child: MaterialButton(
+                  onPressed: () {
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => MyHome()),
+                 );
+                  },
+                  minWidth: 200.0,
+                  height: 45.0,
+                  child: Text(
+                    "Login",
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20.0),
+                  ),
                 ),
               )
             ],

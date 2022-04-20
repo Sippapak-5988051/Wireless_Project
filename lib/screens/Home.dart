@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:provider_shopper/screens/Search.dart';
 
 class MyHome extends StatelessWidget {
   const MyHome({Key? key}) : super(key: key);
@@ -16,17 +17,21 @@ class MyHome extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("SEEHOS_Logo.png",),
+              Image.asset("images/SEEHOS_Logo.png"),
               ElevatedButton(
                  child: Padding(
                       padding: EdgeInsets.all(15.0),
                       child: Text('Search nearby')),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/search');
+                  // Navigator.pushReplacementNamed(context, '/search');
+                  MapUtils.openMap(13.7941365,100.317738);
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green,
                 ),
+              ),
+              SizedBox(
+                height: 3.0,
               ),
               ElevatedButton(
                 child: Padding(
@@ -39,12 +44,29 @@ class MyHome extends StatelessWidget {
                   primary: Colors.grey,
                 ),
               ),
+              SizedBox(
+                height: 3.0,
+              ),
               ElevatedButton(
                 child: Padding(
                       padding: EdgeInsets.all(20.0),
                       child: Text('Register')),
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, '/register');
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.grey,
+                ),
+              ),
+              SizedBox(
+                height: 3.0,
+              ),
+              ElevatedButton(
+                child: Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Text('Login')),
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/login');
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.grey,
